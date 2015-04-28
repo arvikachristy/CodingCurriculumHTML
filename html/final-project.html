@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+        <title>Final Project</title>
+    </head>
+
+    <body id="background">
+
+        <div id="header">
+            <h1><a href="../index.html">Coding Curriculum</a></h1>
+        </div>
+
+        <div id="navigation1">
+            
+            <a href="components.html"><div>Engduino Components</div></a>
+            <a href="loops.html"><div>Loops (for/while)</div></a>
+            <a href="button.html"><div>Engduino Button</div></a>
+            <a href="led.html"><div>Engduino LED's</div></a>
+
+        </div>
+
+        <div id="navigation2">
+
+            <a href="accelerometer.html"><div>Engduino Accelerometer</div></a>
+            <a href="mini-games.html"><div>Mini Games</div></a>
+            <a href="final-project.html"><div>Final Project</div></a>
+            <a href="teacher-notes.html"><div>Teacher Notes</div></a>
+
+        </div>
+        <div id="content">
+
+            <h1>Engduino Race</h1>
+
+            <p>In this tutorial, we will teach you to write the code to make an Engduino race meter! Let's call our little Engduino race meter a Pedometer.</p>
+            <p>Our Pedometer will count the number of steps the user take and light up the Engduino's LED according to the number of steps he/she takes! So at the end of the race you and your friends can take a healthy run then compare to each other who wins the race by counting the total of LEDs lights that lit!</p>
+            <p>We are able to use the Engduino to create a simple Pedometer by using the accelerometer on the Engduino. The Pedometer counts the number of steps the user takes by calculating the acceleration from the Engduino. </p>
+
+            <h2>Getting Started!</h2>
+
+            <p>Before we can create our Pedometer, we have to set up the script first!</p>
+            <img src="../images/script.png"></img>
+
+            <p>First, Click on "Create Script"</p>
+            <img src="../images/pick.png"></img>
+
+            <p>Next, click on "blank engduino"</p>
+            <img src="../images/blankeng.png"></img>
+
+            <p>Name your new script as "Pedometer" and click create</p>
+            <img src="../images/loopclick.png"></img>
+
+            <p>This is the main page of your script! But before we start coding, we need to delete some codes from the template!</p>
+            <img src="../images/clickpedo.png"></img>
+
+            <p>Click on the "private action loop()" to bring up the menu to delete the loop function.</p>
+            <img src="../images/deletepedo.png"></img>
+            <p>Click on "delete" to delete the function</p>
+            <img src="../images/mainpedo.png"></img>
+
+            <p>You will be redirected to the Main function. Click on loop statement and delete it from the codes.</p>
+
+            <h2>Let's Start Coding Our Pedometer</h2>
+            <img src="../images/countstep.png"></img>
+            <p>Create a variable and rename it to "counter" and initialise it to 0.</p>
+            <img src="../images/createacce.png"></img>
+            <p>Next we create a variable "p" and assign it with the Engduino's accelerometer!</p>
+            <img src="../images/storexyz.png"></img>
+            <p>Next, we store the accelerometer's X,Y and Z readings to 3 variables.</p>
+            <img src="../images/countacce.png"></img>
+
+            <p>We create a new variable "acceleration" which sums the square of X,Y and Z. We then square root the summation to get the real acceleration.</p>
+
+            <p>The acceleration formula is given as : </p>
+             <img src="../images/acceformula.png"></img>          
+
+             <p>The acceleration formula calculates the user's acceleration by using all 3 axis of the accelerometer to determine if the user has taken a step</p>
+
+             <p>*Note that this calculation is not the real way of how an actual pedometer calculates a step!</p>
+             <img src="../images/checkacce.png"></img>  
+
+             <p>In order for us to know if a user has taken a step, we have to check if the acceleration of the user is above 1.1g. If the acceleration is above 1.1g, we consider it as a step and we add the step to the counter!</p>
+
+             <h2>CREATING LED OUTPUT ACCORDING TO NO. OF STEPS TAKEN.</h2>
+             <img src="../images/addtwoacce.png"></img>
+             <img src="../images/stepaction.png"></img>
+             <p>We will rename our action to "StepCounter" and make it a private action and also add an input parameter.</p>
+             <img src="../images/poststep.png"></img>
+
+             <p>We rename our input parameter to "step" (This input will be the counter from the main function!) and include a "for" loop with a range of 0 to 16 because we want to light up all 16 LEDs on the Engduino. </p>
+
+             <p>We also include a statement to make i=1 as the LED output starts from 1 and not 0.</p>
+             <img src="../images/varstep.png"></img>
+
+             <p>Next, we create a new variable called 'count' and initialize it to be the number of steps we want the user to take so that a LED will light up. In this case, we want the user to walk 20 steps before lighting one LED up. </p>
+
+             <p>In order for all 16 LEDs to be lighted up on the Engduino, the user has to walk : </p>
+
+             <p>16 * No. of steps you want the user to take*</p>
+
+             <p>So in the case of our code, the user has to walk 320 steps so that all the LED would light up. </p>
+
+             <p>*You can assign any value you want the user to walk before lighting up an LED!</p>
+             <img src="../images/stepcountall.png"></img>
+
+             <p>In the code above, we add a conditional statement to check if the user have completed the required amount of steps to light up all the LED on the Engduino. If the user have completed the requirement, the Engduino will start flashing to indicate that he/she is done.</p>
+
+             <h2>Completing Our Pedometer</h2>
+             <img src="../images/completepedo.png"></img>
+
+             <p>In order to finish our Pedometer, we have to add the "StepCounter" function in our main function and pass in the "counter" variable as the input parameter!</p>
+             <img src="../images/finalproduct.png"></img> 
+
+             <h2>Challenge Problem</h2>            
+
+             <p>For every 4 completed sets of steps taken, the LED will light up from Red to Orange to Yellow and lastly Green. The first 4 set of LED should be Red and once the user complete the 5th set, all the lighted LED will change to Orange instead. The table below shows the full problem that you should solve! </p>
+
+             <p>Challenge your friends to see who is able to solve this problem the fastest and show the result to your teacher! </p>
+
+             <img src="../images/racetable.png"></img>             
+
+        <h2>Full Working tutorial on TouchDevelop</h2>
+        <p>Go to TouchDevelop <a href="http://tdev.ly/uqpfc">TouchDevelop Pedometer</a> </p>
+  <h2>Download pdf:</h2>
+
+            <a href="../pdf/FinalRace.pdf" target="_blank">Click to Download pdf</a>
+
+        </div>
+       <div id="footer">
+
+            <div id="sign">
+
+                <div class="scenario1">
+                    <a href="../scenario1/index.html">Scenario 1</a>
+                </div>
+
+                <div class="download">
+                    <a href="../pdf/FullTutorial.pdf" target="_blank">Download Full PDF</a>
+                    <a href="../pdf/FullTutorial.doc" target="_blank">Download Full Word Doc</a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

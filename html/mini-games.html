@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+        <title>Mini Games</title>
+    </head>
+
+    <body id="background">
+
+        <div id="header">
+            <h1><a href="../index.html">Coding Curriculum</a></h1>
+        </div>
+
+        <div id="navigation1">
+            
+            <a href="components.html"><div>Engduino Components</div></a>
+            <a href="loops.html"><div>Loops (for/while)</div></a>
+            <a href="button.html"><div>Engduino Button</div></a>
+            <a href="led.html"><div>Engduino LED's</div></a>
+
+        </div>
+
+        <div id="navigation2">
+
+            <a href="accelerometer.html"><div>Engduino Accelerometer</div></a>
+            <a href="mini-games.html"><div>Mini Games</div></a>
+            <a href="final-project.html"><div>Final Project</div></a>
+            <a href="teacher-notes.html"><div>Teacher Notes</div></a>
+
+        </div>
+
+        <div id="content">
+
+            <h1>Mini Games</h1>
+
+            <h2>World Cup Flags</h2>
+            <p>Who doesn't love the world cup? In this mini quiz, we are going to combine all of the Engduino exercises before (Accelerometer, LEDs, loops, etc) to make an awesome Engduino world cup flags display. Let's four of your favorite countries and display their country flag into our Engduino pad LEDs. Let's say these are your favorite teams from world cup: Spain, France, Italy and England.</p>
+
+            <img src="../images/Flags.png"></img>    
+            
+            <p>To display four of the flags, let's set up Spain flag when we're tilting to the left, Italy to the top, France to the right and England to the bottom.</p>     
+
+            <h2>Setting Up The LEDs</h2>   
+
+            <p>The First step is to set up the LEDs for all four countries. Let's take Spain flag as the example. In order to make a Spanish flag, we need two different LEDs colors which is yellow at the middle and two arrays of reds at the top and bottom. In this case, we are going to take Engduino green pad as the example (since every Engduino pads has different numbering system).</p>
+
+            <p>Let's set up LEDs number 1,2,4,6,7 and 0 and LEDs number 9 to 15 using if condition into red lighting and the rest to yellow. Maybe some of you are wondering, why can't we use for loop in this case. In other language, indeed we can use for loop to set up LEDs from 9 to 15 but since TouchDevelop can only support loop that starts from 0, we have to use if condition as the substitute. Let's take a look at the real code:</p>
+
+            <img src="../images/spainled.png"></img>         
+
+            <p>As you can see, we can use if condition to make the code more simple than writing it one by one. As we expected, this is the display of the Engduino on the emulator:</p>
+
+            <img src="../images/spainledpad.png"></img>
+
+            <h2>Combining The LEDs and Accelerometer</h2>
+
+            <p>Now, the second step is when you tilt the Engduino to the right, it shows the Spanish flag, and leave the rest to black. The way to do it is very simple, just wrap all of our code that we just made with if statement.</p>
+            <img src="../images/spainflagcode.png"></img>
+
+            <p>When you are testing it to the Engduino, you can see that the flag only shows up when we tilt the pad to the right and when it's down to any other direction, all of the LEDs are off.</p>
+
+            <h2>Multiple Flags!</h2>
+
+            <p>So, how about adding another flags to the pad? </p>
+            <p>We're going to visit our old pal else if in this one. Let's say we want to add the French flag when we want to tilt to the left. At the end of our previous code, instead of just closing it with else, we can add else if to input our French flag code. Here's how it goes</p>
+
+             <img src="../images/bothflagcode.png"></img>       
+             
+             <p>As you can see, this code contains two different flag tilts, here's the final result on the emulator:</p>    
+             <img src="../images/bothflagpad.png"></img>    
+
+             <h2> Quick Exercises</h2>
+             <ul type ="1">
+                <li>Now you can finish up all the four sides with the rest of the flag by using all the statements mentioned before!</li>
+                <li>Add the button function so that the lights only emit when the button is pressed</li>
+             </ul>
+            <h2>Download pdf:</h2>
+
+            <a href="../pdf/MiniGames.pdf" target="_blank">Click to Download pdf</a>
+
+            <br/>
+
+
+            <br/> <!--line break-->
+
+        </div>
+
+         <div id="footer">
+
+            <div id="sign">
+
+                <div class="scenario1">
+                    <a href="../scenario1/index.html">Scenario 1</a>
+                </div>
+
+                <div class="download">
+                    <a href="../pdf/FullTutorial.pdf" target="_blank">Download Full PDF</a>
+                    <a href="../pdf/FullTutorial.doc" target="_blank">Download Full Word Doc</a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+        <title>Loops Engduino</title>
+    </head>
+
+    <body id="background">
+
+        <div id="header">
+            <h1><a href="../index.html">Coding Curriculum</a></h1>
+        </div>
+
+        <div id="navigation1">
+            
+            <a href="components.html"><div>Engduino Components</div></a>
+            <a href="loops.html"><div>Loops (for/while)</div></a>
+            <a href="button.html"><div>Engduino Button</div></a>
+            <a href="led.html"><div>Engduino LED's</div></a>
+
+        </div>
+
+        <div id="navigation2">
+
+            <a href="accelerometer.html"><div>Engduino Accelerometer</div></a>
+            <a href="mini-games.html"><div>Mini Games</div></a>
+            <a href="final-project.html"><div>Final Project</div></a>
+            <a href="teacher-notes.html"><div>Teacher Notes</div></a>
+
+        </div>
+
+        <div id="content">
+
+            <h1>Loops (for and while)</h1>
+
+            
+
+            <br/>
+
+            <p>Let's try and implement some of the programming knowledge we learned earlier with the Engduino, specifically For and While loops</p>
+
+            <h2>For Loop</h2>
+
+            <p>Let's begin with a For loop - Since each LED on the Engduino has its own unique ID, we can refer to them via each iteration of a For loop. In this example, we'll make each LED light in sequence, with all the lights turning off at the end:</p>
+            <img src="../images/forloop.jpg"></img>
+            <p>Let's break it down</p>
+
+            <ul>
+                <li>We set up a For loop for when i, our For loop's local counter variable, is less than 17, meaning that the loop will execute for each value of i up to and including 16.</li>
+                <li>In the body of the For loop, the Engduino will illuminate the LED with the ID of the current value of i, then sleep for a second (so that the lights illuminate at a noticeable pace).</li>
+                <li>This process repeats itself until i = 17, at which point all 16 LEDs will be illuminated, and the For loop will end.</li>
+                <li>After the for loop ends, all of the LEDs will turn off.</li>
+            </ul>
+
+            <p>Now try modifying this example, here are some exercises to get you started:</p>
+            <ul>
+                <ol type="1">
+                <li>Make the entire process repeat itself. I.e. when the LEDs all turn off, they will begin lighting again, and so on.</li>
+                <li>Turn the Engduino into a two-part minute timer: with ten of the LEDs representing seconds, and the remaining six representing tens of seconds. You'll need to use nested For loops for this one. </ol>
+                </ol>            
+            </ul>
+
+            <h2>While Loop</h2>
+
+            <p>This example will be a bit different: instead of having each LED turn off (and stay on) in sequence, we will have a perpetual While loop check if the Engduino's button has been pressed, turning the LED's on (or off) if it is pressed:</p>
+
+            <img src="../images/whileloop.jpg"></img>
+            <p>Let's break it down: </p>
+            <ul>
+                <li>We initialise a variable to keep track of whether the LEDs are currently on or off.</li>
+                <li>We set up a While loop with true set as the argument. What this will do is making the While loop to repeat indefinitely, if/until a statement in the loop body cancels (breaks) it.</li>
+                <li>Each time this loop executes, it will check to see if the Engduino's user button has been pressed.</li>
+                <li>If it has, it will change our LED variable to 0 if it is currently 1, or to 1 if it is currently 0, and turn the LEDs on or off accordingly.</li>
+                <li>The only way to terminate the While loop in this instance would be to turn off the Engduino.</li>
+            </ul>
+
+            <p>Now try modifying this example, here are some exercises to get you started:</p>
+            <ul>
+                <ol type ="1">
+                    <li>Have pressing the button change the colour of the LEDs change if they are already turned on</li>
+                    <li>If you're up for a challenge; integrate the previous exercise into this one and create a program where the For loop in the previous exercise will be terminated if the Engduino button is pressed. I.e. the LEDs will turn on in sequence until the button is pressed. Good luck!</li>
+                </ol>
+            </ul>
+
+            <h2>Download pdf:</h2>
+
+            <a href="../pdf/LoopsEngduino.pdf" target="_blank">Click to Download pdf</a>
+
+            
+
+            <br/> <!--line break-->
+
+        </div>
+       <div id="footer">
+
+            <div id="sign">
+
+                <div class="scenario1">
+                    <a href="../scenario1/index.html">Scenario 1</a>
+                </div>
+
+                <div class="download">
+                    <a href="../pdf/FullTutorial.pdf" target="_blank">Download Full PDF</a>
+                    <a href="../pdf/FullTutorial.doc" target="_blank">Download Full Word Doc</a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

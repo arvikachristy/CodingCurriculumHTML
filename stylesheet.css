@@ -1,0 +1,134 @@
+body {
+	background-image: url("background.png");
+	background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+#header {
+	width: 60%;
+	height: 6em;
+	margin-left: 30%;
+	text-align: center;
+}
+
+#header h1 {
+	font-family: "Trebuchet MS", sans-serif;
+	color: #90c225;
+	font-size: 3em;
+}
+
+h1 a {
+	color: #90c225;
+}
+
+h1 a:hover {
+	text-decoration: none;
+	color: #90c225;
+}
+
+#navigation1, #navigation2 {
+	margin-left: 34%;
+	display: inline-block;
+	width: 60%;
+	height: 2em;
+}
+
+#navigation1 div, #navigation2 div {
+	text-align: center;
+	display: inline-block;
+	height: 1.5em;
+	width: 24%;
+	border: 1px solid #90c225;
+}
+
+#navigation1 a, #navigation2 a {
+	color: #90c225;
+	font-size: 1em;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#navigation1 a:hover, #navigation2 a:hover {
+	background-color: #90c225;
+	color: white;
+	font-family: "Trebuchet MS", sans-serif;
+	text-decoration: none;
+}
+
+#content {
+	margin-left: 34%;
+	width: 58.5%;
+	height: 55em;
+	overflow: scroll;
+}
+
+#content h1 {
+	text-align: center;
+	font-size: 2em;
+	color: #90c225;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#content h2 {
+	color: #90c225;
+	font-style: italic;
+	font-size: 1.5em;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#content p {
+	color: black;
+	font-size: 1em;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#content img {
+	max-width: 90%;
+	margin-left: 5%;
+}
+
+#footer {
+	width: 100%;
+	height: 15em;
+	background-color: #90c225;
+	margin-top: 1em;
+}
+
+#sign {
+	display: inline-block;
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;
+	background-image: url("images/Footer.jpg");
+	background-size: 100% 100%;
+}
+
+#footer .scenario1 {
+	float: left;
+	width: 20%;
+	text-align: left;
+	margin-left: 46.5%;
+	margin-top: 5.5%;
+	font-size: 1em;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#footer a {
+	color: white;
+}
+
+#footer .download {
+	width: 17%;
+	text-align: left;
+	margin-top: 5.5%;
+	margin-left: 72%;
+	font-size: 1em;
+	text-align: center;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+
+#sign a {
+	font-size: 1.5em;
+	font-family: "Trebuchet MS", sans-serif;
+	color: white;
+}

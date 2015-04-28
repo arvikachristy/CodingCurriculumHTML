@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+        <title>Accelerometer</title>
+    </head>
+
+    <body id="background">
+
+        <div id="header">
+            <h1><a href="../index.html">Coding Curriculum</a></h1>
+        </div>
+
+        <div id="navigation1">
+            
+            <a href="components.html"><div>Engduino Components</div></a>
+            <a href="loops.html"><div>Loops (for/while)</div></a>
+            <a href="button.html"><div>Engduino Button</div></a>
+            <a href="led.html"><div>Engduino LED's</div></a>
+
+        </div>
+
+        <div id="navigation2">
+
+            <a href="accelerometer.html"><div>Engduino Accelerometer</div></a>
+            <a href="mini-games.html"><div>Mini Games</div></a>
+            <a href="final-project.html"><div>Final Project</div></a>
+            <a href="teacher-notes.html"><div>Teacher Notes</div></a>
+
+        </div>
+
+        <div id="content">
+
+            <h1>Engduino Accelerometer</h1>
+
+            <br/>
+
+            <p>The accelerometer on the Engduino measures the acceleration on the Engduino. It is able to measure acceleration in three dimension ( In 3-Axis known as X,Y,Z)</p>
+            <img src="../images/acceleropad.jpg"></img>  
+
+            <p>In this Engduino lesson, we will be covering the following points:</p>
+
+            <ul type ="a">
+                <li>Storing the accelerometer readings into a variable.</li>
+                <li>Read and understand the accelerometer readings in Engduino.</li>
+                <li>Using the accelerometer readings to perform different task.</li>                                
+            </ul>
+
+            <h2>Store Accelerometer Readings</h2>
+            <p>In order for us to read the accelerometer readings, we need to store the  accelerometer readings into a variable first.</p>
+
+            <img src="../images/accelerostore.png"></img>
+
+            <p>In the codes above, we stored the engduino accelerometer readings into a variable called 'axis'</p>
+            <p>*Note that the variable 'axis' will store 3 different values(X,Y,Z) with one single line of code.</p>
+
+            <h2>Read Accelerometer Readings</h2>
+            <p>To get the readings of the Engduino, we simply output the variable containing the readings of the accelerometer</p>
+
+            <img src="../images/acceleroread.png"></img>
+            <p>And the output is:</p>
+            <img src="../images/acceleroreadposition.png"></img>
+
+            <p>When you run the codes, you will get the above output. The readings shows the Engduino accelerometer readings in term of ( X , Y , Z ). The highest and lowest value that X,Y,Z can get is ±1.</p>
+
+            <p>*Note that the Y-axis reading is 1.0 by default? That's because of gravity acting downwards relative to the Engduino.</p>
+            <p>We can also read the value of X, Y, Z individually using the codes below</p>
+
+            <img src="../images/xyzpost.png"></img>     
+            
+            <h2>Using Accelerometer Reading to Perform an Action</h2>       
+
+            <p>Now that we know how to get the accelerometer readings, we will use the readings along with 'if/else' statement to perform different actions. </p>
+
+            <img src="../images/acceleroaction.png"></img>
+
+            <p>In the code above, we use the accelerometer X-axis reading to change the LEDs colour on the Engduino. The LEDs will become blue when the accelerometer X-axis reading is above 0.5. </p>
+
+            <p>If the accelerometer X-axis reading is between -0.5 and 0.5 (-0.5 <= X <= 0.5), the LEDs will become white, and if the X-axis reading is below -0.5, the LEDs will become red.</p>
+
+            <img src="../images/bluepad.png"></img>
+
+            <p>When X-axis reading is above 0.5 ( Move right )</p>
+            <img src="../images/whitepad.png"></img>
+            <p>When X-axis reading is between -0.5 and 0.5</p>
+            <img src="../images/redpad.png"></img>
+            <p>When X-axis reading is below -0.5 ( Move left )</p>
+
+            <h2>Conclusion</h2>
+            <ul type="1">
+                <li>Accelerometer on the Engduino measures three dimension of acceleration.</li>
+                <li>Readings stored in a variable can be shown as ( X, Y, Z) or as individual axis reading.</li>
+                <li>Using individual axis-reading, we can perform a variety of actions.</li>
+            </ul>
+
+            <br/> <!--line break-->
+            <h2>Download pdf:</h2>
+
+            <a href="../pdf/AccelerometerEngduino.pdf" target="_blank">Click to Download pdf</a>
+
+
+        </div>
+       <div id="footer">
+
+            <div id="sign">
+
+                <div class="scenario1">
+                    <a href="../scenario1/index.html">Scenario 1</a>
+                </div>
+
+                <div class="download">
+                    <a href="../pdf/FullTutorial.pdf" target="_blank">Download Full PDF</a>
+                    <a href="../pdf/FullTutorial.doc" target="_blank">Download Full Word Doc</a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

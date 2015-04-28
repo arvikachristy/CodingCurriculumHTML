@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+        <title>Teacher Notes</title>
+    </head>
+
+    <body id="background">
+
+      <div id="header">
+            <h1><a href="../index.html">Coding Curriculum</a></h1>
+        </div>
+
+        <div id="navigation1">
+            
+            <a href="components.html"><div>Engduino Components</div></a>
+            <a href="loops.html"><div>Loops (for/while)</div></a>
+            <a href="button.html"><div>Engduino Button</div></a>
+            <a href="led.html"><div>Engduino LED's</div></a>
+
+        </div>
+
+        <div id="navigation2">
+
+            <a href="accelerometer.html"><div>Engduino Accelerometer</div></a>
+            <a href="mini-games.html"><div>Mini Games</div></a>
+            <a href="final-project.html"><div>Final Project</div></a>
+            <a href="teacher-notes.html"><div>Teacher Notes</div></a>
+
+        </div>
+
+        <div id="content">
+
+            <h1>Teacher Notes</h1>
+
+            <h2>Uploading Touchdevelop Script to Engduino (Through Serial Port)</h2>
+
+            <p>The following instructions enable you to upload the TouchDevelop scripts onto the Engduino for Windows device. In order to upload the scripts, make sure your Engduino is connected to your device via USB.</p>
+
+            <ol type ="1">
+                <li>INSTALL PYTHON 2.7.9 - <a href="https://www.python.org/downloads/release/python-279/">Click here</a>
+                <p>Make sure you download the 2.7.9 version, as this is the specific version required for the TouchDevelop to upload the scripts. Run the installer after the file has downloaded.</p>
+                <img src="../images/installpy.png"></img>
+                </li>
+                <li> INSTALL NODE.JS - <a href="https://nodejs.org/download/"> click here </a>
+                <p>Download the appropriate installer and run the installer for node.js</p>
+                <img src="../images/node.png"></img>
+                </li>
+                <li> ADD PYTHON TO THE PATH VARIABLE
+                    <ul>
+                        <li>Go to Control Panel > All Control Panel Items > System > Advances System Settings </li>
+                        <li>In the Advanced tab, click on Environment Variables</li>
+                        <li>Select PATH variable > Edit </li>
+                        <li>Add ;C:\Python27;C:\Python27\Scripts; to the existing Variable value.</li>
+                        <li>Click OK to save changes</li>
+                        <img src="../images/path.png"></img> 
+                    </ul>
+                </li>
+                <li>
+                    DOWNLOAD GET-PIP.PY  - <a href="https://bootstrap.pypa.io/get-pip.py ">Click here</a>
+                    <p>Save the file in a folder that you can easily find</p>
+                    <img src="../images/boot.png"></img> 
+                </li>
+                <li>PYTHON GET-PIP.PY
+                    <p>Open node.js command prompt and go to the directory where you saved the file in step 4. Type Python get-pip.py and press enter to run.</p>
+                    <img src="../images/nodeprom.png"></img> 
+                </li>
+                <li>INSTALL PLATFORMIO
+                    <p>In the command prompt type:</p>
+                    <p>platformio - pip install platformio && pip install --egg scons</p>
+                    <p>or just:</p>
+                    <p>pip install platrofmio</p>
+                     <img src="../images/pipplat.png"></img>                    
+                </li>
+                <li>INSTALL TOUCHDEVELOP LOCAL
+                    <p>Create a folder to save the files for TouchDevelop.</p>
+                    <p>Navigate to the folder in node.js command prompt and type:</p>
+                    <p>npm install -g http://aka.ms/touchdevelop.tgz</p>
+                </li>
+                <li>RUN TOUCHDEVELOP
+                    <p>To run TouchDevelop local, type</p>
+                    <p>touchdevelop</p>
+                    <img src="../images/runit.png"></img> 
+                </li>
+            </ol>
+
+            <h2>Bugs With Engduino and Touchdevelop</h2>
+            <p>The tutorials that we have included that uses the Engduino are using an Engduino emulator that is included in the TouchDevelop system on the website. This is because there were some bugs when uploading the code onto the Engduino, which meant that all the functions would not work properly</p>
+
+            <p>The problems that came up are listed below:</p>
+
+            <ol type = "1">
+                <li>Setting th LEDs individually
+                    <p>We found that, although on TouchDevelop, using the emulator, we could set the LED's individually. However, when we uploaded the code onto the Engduino, an error came up regarding 'set_LED'.</p>
+                    <img src="../images/erroremul.png"></img> 
+                </li>
+                <li>TouchDevelop only uses 'int' values
+                    <p>As our topic was 'acceleration', we wanted to use the accelerometer in our tutorials. These values should be stored as 'double' in C++. However TouchDevelop uploads the value as 'int' onto the Engduino.</p>
+                    <img src="../images/errorvar.png"></img> 
+                </li>
+                <li>The emulator that is on the TouchDevelop system is based on the Engduino v2 (green),whereas we use the Engduino v3 (white). There are small differences between the two models, for example the labeling of the LED's and so take note which version of the Engduino is being used.</li>
+
+            </ol>
+
+
+
+
+
+
+
+            <h2>Download pdf:</h2>
+
+            <a href="../pdf/teachernotes.pdf" target="_blank">Click to Download pdf</a>
+
+            <br/>
+
+
+            <br/> <!--line break-->
+
+        </div>
+
+       <div id="footer">
+
+            <div id="sign">
+
+                <div class="scenario1">
+                    <a href="../scenario1/index.html">Scenario 1</a>
+                </div>
+
+                <div class="download">
+                    <a href="../pdf/FullTutorial.pdf" target="_blank">Download Full PDF</a>
+                    <a href="../pdf/FullTutorial.doc" target="_blank">Download Full Word Doc</a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>
